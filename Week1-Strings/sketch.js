@@ -7,19 +7,19 @@ function setup() {
   noCanvas();
 
   // Make an h2 element
-  greeting = createElement('h2', 'What is your name?');
+  greeting = createElement('h2', 'Ingrese aquí su cartel:');
   // Make a text input field
   input = createInput();
   // Make a submit button
   button = createButton('submit');
 
-  // Here a button triggers the "hello message"
-  button.mousePressed(greet);
+  // Here a button triggers the "tiempo vándalo"
+  button.mousePressed(tiempo);
 
   // p5 has a function for when the user hits enter
   // Since we are using the button, it's not necessary here
   // though we could have both?
-  input.changed(greet);
+  input.changed(tiempo);
 
   // The input event is fired with each keyPress
   input.input(greetTyping);
@@ -31,7 +31,7 @@ function greetTyping() {
   greeting.html(input.value());
 }
 
-function greet() {
+function tiempo() {
   var name = input.value();
-  var par = createP('hello '+ name + '!');
+  var par = createP(name);
 }
