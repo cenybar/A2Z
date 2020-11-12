@@ -33,5 +33,11 @@ function greetTyping() {
 
 function tiempo() {
   var name = input.value();
-  var par = createP(name);
+  let output = '';
+
+  for(let i = 0; i < data.length; i++) {
+    output = output.concat(name[i]);
+    console.log(output);  
+  }
+  
 }
